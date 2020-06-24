@@ -1,0 +1,50 @@
+.player-content, .place {
+    display: flex;
+    overflow-x: scroll;
+}
+
+article {
+    align-items: center;
+    border: 1px solid #e1e0e0;
+    box-shadow: 0 1px 6px #dbdbdb;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 6px;
+    padding: 20px 2px;
+}
+
+article img {
+    border-radius: 4 px;
+    box-shadow: 0 1px 6px #dbdbdb;
+    height: 120px;
+    margin: 0 12px;
+    width: 170px;
+}
+
+button {
+    border-radius: 8px;
+    box-shadow: 0 1px 6px #dbdbdb;
+    color: white;
+    cursor: pointer;
+    font-size: 0.7em;
+    font-weight: 400;
+    margin: 0 6px;
+    padding: 10px;
+}
+
+.success {
+    background-color: green;
+    border: 1px solid green;
+}
+
+.warning {
+    background-color: orange;
+    border: 1px solid orange;
+}
+
+.danger {
+    background-color: red;
+    border: 1px solid red;
+}
