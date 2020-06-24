@@ -1,11 +1,44 @@
 .player-content, .place {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    overflow-x: scroll;
 }
 
-img {
-    height: 200px;
-    width: 300px;
+article {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 2px;
+    padding: 20px 2px;
+}
+
+article img {
+    height: 120px;
+    margin: 0 12px;
+    width: 170px;
+}
+
+button {
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.7em;
+    font-weight: 400;
+    margin: 0 6px;
+    padding: 10px;
+}
+
+.success {
+    background-color: green;
+    border: 1ps solid green;
+}
+
+.warning {
+    background-color: orange;
+    border: 1ps solid orange;
+}
+
+.danger {
+    background-color: red;
+    border: 1ps solid red;
 }

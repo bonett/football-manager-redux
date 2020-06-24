@@ -1,26 +1,32 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { REMOVE_SUB_PLAYER } from './../constants';
+import './../style/style.css';
 
 const SubPlayers = ({ subPlayers, removeSubPlayer }) => {
     return (
         <section>
-            <h2>Sub Players</h2>
-            <div className="place">
-                {
-                    subPlayers.map(player => {
-                        return (
-                            <article className="best-player" key={player.id}>
-                                <div>
-                                    <img src={player.photo} alt={player.name} />
-                                    <button onClick={() => removeSubPlayer(player)}>X</button>
-                                </div>
-                                <p>{player.name}</p>
-                            </article>
-                        )
-                    })
-                }
-            </div>
+            {
+                subPlayers.length > 0 ?
+                    <div>
+                        <h2>Sub Players</h2>
+                        <div className="place">
+                            {
+                                subPlayers.map(player => {
+                                    return (
+                                        <article className="best-player" key={player.id}>
+                                            <img src={player.photo} alt={player.name} />
+                                            <p>{player.name}</p>
+                                            <button className="danger" onClick={() => removeSubPlayer(player)}>REMOVE PLAYER</button>
+                                        </article>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                    : null
+            }
+
         </section>
     )
 }

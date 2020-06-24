@@ -1,26 +1,33 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { REMOVE_BEST_PLAYER } from './../constants';
+import './../style/style.css';
 
 const BestPlayers = ({ bestPlayers, removeBestPlayer }) => {
     return (
         <section>
-            <h2>Best Players</h2>
-            <div className="place">
-                {
-                    bestPlayers.map(player => {
-                        return (
-                            <article className="best-player" key={player.id}>
-                                <div>
-                                    <img src={player.photo} alt={player.name} />
-                                    <button onClick={() => removeBestPlayer(player)}>X</button>
-                                </div>
-                                <p>{player.name}</p>
-                            </article>
-                        )
-                    })
-                }
-            </div>
+            {
+                bestPlayers.length > 0 ?
+                    <div>
+                        <h2>Best Players</h2>
+                        <div className="place">
+                            {
+                                bestPlayers.map(player => {
+                                    return (
+                                        <article className="best-player" key={player.id}>
+                                            <div>
+                                                <img src={player.photo} alt={player.name} />
+                                                <p>{player.name}</p>
+                                                <button className="danger" onClick={() => removeBestPlayer(player)}>REMOVE PLAYER</button>
+                                            </div>
+                                        </article>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                    : null
+            }
         </section>
     )
 }

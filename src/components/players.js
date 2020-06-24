@@ -7,15 +7,15 @@ const Players = ({ players, addBestPlayer, addSubPlayer }) => {
     return (
         <section>
             <h2>Players</h2>
-            <div className="player-content">
+            <div className="place">
                 {
                     players.map(player => (
                         <article className="player" key={player.id}>
                             <img src={player.photo} alt={player.name} />
                             <h3>{player.name}</h3>
                             <div>
-                                <button onClick={() => addBestPlayer(player)}>Best Player</button>
-                                <button onClick={() => addSubPlayer(player)}>Sub Player</button>
+                                <button className="success" onClick={() => addBestPlayer(player)}>TITULAR</button>
+                                <button className="warning" onClick={() => addSubPlayer(player)}>SUPLENTE</button>
                             </div>
                         </article>
                     ))
