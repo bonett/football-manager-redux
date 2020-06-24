@@ -15,11 +15,9 @@ const BestPlayers = ({ bestPlayers, removeBestPlayer }) => {
                                 bestPlayers.map(player => {
                                     return (
                                         <article className="best-player" key={player.id}>
-                                            <div>
-                                                <img src={player.photo} alt={player.name} />
-                                                <p>{player.name}</p>
-                                                <button className="danger" onClick={() => removeBestPlayer(player)}>REMOVE PLAYER</button>
-                                            </div>
+                                            <img src={player.photo} alt={player.name} />
+                                            <p>{player.name}</p>
+                                            <button className="danger" onClick={() => removeBestPlayer(player)}>REMOVE PLAYER</button>
                                         </article>
                                     )
                                 })
