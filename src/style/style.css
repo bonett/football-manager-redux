@@ -1,0 +1,11 @@
+.player-content, .place {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img {
+    height: 200px;
+    width: 300px;
+}
